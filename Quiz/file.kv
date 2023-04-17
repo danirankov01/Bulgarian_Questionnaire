@@ -41,7 +41,7 @@ ScreenManagement: # Make all of the pages screenable
         Label: # The Label widget is for rendering text
 
             text:'1. Кои са трите национални парка в България?'
-            font_size:self.width/6.5 -> # Size of the question
+            font_size:self.width/6.5 # Size of the question
             color: 0,0,0 - # background-color
 
             # sizes
@@ -96,10 +96,10 @@ ScreenManagement: # Make all of the pages screenable
             on_release:self.background_color = (0,255,0)
 
 
-        AnchorLayout: -> # The widget aligns its children to a border (top, bottom, left, right) or center.
+        AnchorLayout:  # The widget aligns its children to a border (top, bottom, left, right) or center.
             anchor_y:'bottom'
-            BoxLayout: -> # It arranges children in a vertical or horizontal box.
-                Button: -> # Go to previous page
+            BoxLayout:  # It arranges children in a vertical or horizontal box.
+                Button:  # Go to previous page
                     on_release:app.root.current = 'home'
                     background_normal:'Button-Previous-icon.png'
                     background_down:'Button-Previous-icon.png'
