@@ -12,7 +12,11 @@ Let's start with the very basics. So what prerequisites do you need to run the p
 
  - Python programming language
  - Integrated development environment (preferable is Pycharm)
- - Know-how to configure interpreter (System one and the one for Virtual environment)
+ - Configured interpreter (System and Virtual)
  - WSL == Linux on your Windows machine
- - Ubuntu
- - adb server
+ - Ubuntu - install in it the file converter
+ - adb server - So to run commands on the mobile device
+ - Buildozer - converts .py to .apk
+ - SDK tool
+ - Enabled Developer Mode on your mobile device
+
