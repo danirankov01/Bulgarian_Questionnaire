@@ -1,4 +1,4 @@
-ScreenManagement:
+ScreenManagement: -> # Make all of the pages screenable
     HomePage:
     Question1:
     Question2:
@@ -12,7 +12,7 @@ ScreenManagement:
     Question10:
 
 
-<HomePage>:
+<HomePage>: -> # load logo
     name:'home'
     canvas.before:
         Rectangle:
@@ -20,32 +20,50 @@ ScreenManagement:
             source: 'play_quiz.jpg'
         
     
-    Button:
+    Button: -> # make sizes, load buttons - "play" and "first question page (q1)"
         on_release:app.root.current = 'q1'
         size_hint:0.65,0.3
         pos_hint: {"x":0.15,"y":0.15,}
         background_normal:'play.png'
         background_down:'play.png'
-                  
-<Question1>:
-    name:'q1'
-    BoxLayout:
-        orientation: 'vertical'
 
-        Label:
+
+        # From 32 line till the last one the code is exactly the same #
+        # So I will explain only the first question (page) #
+
+<Question1>: - # A class rule, declared by the name of a widget class between < > and followed by :
+                # defines the appearance and behavior of any instance of that class
+
+    name:'q1' - # reference for the button
+    BoxLayout:
+        orientation: 'vertical' - # positioning of the whole page #
+
+        Label: -> # The Label widget is for rendering text
+
             text:'1. Кои са трите национални парка в България?'
-            font_size:self.width/6.5
-            color: 0,0,0
-            text_size: self.width, None
-            size_hint: 0.8, None
-            pos_hint: {"x":0.10,"y":0.10,}
+            font_size:self.width/6.5 -> # Size of the question
+            color: 0,0,0 - # background-color
+
+            # sizes
+                text_size: self.width, None
+                size_hint: 0.8, None
+                pos_hint: {"x":0.10,"y":0.10,}
+            #
+
             height: self.texture_size[1]
             canvas.before:
-                Rectangle:
+                Rectangle: -> # The instruction Rectangle is automatically added to the canvas object and will be used when the window is drawn.
                     pos: self.pos
                     size: self.size
-            padding: [50,0]
-            margin: [20, 0]
+
+            # give ways
+                padding: [50,0]
+                margin: [20, 0]
+            #
+
+
+        # Here we have 3/4 right questions so when we click them they become green (0,255,0).
+        # Otherwise wrong picked number become red.
             
         Button:
             background_color: 0,255,255
@@ -76,14 +94,16 @@ ScreenManagement:
             font_size:self.width/20
             color: (255,255,255)
             on_release:self.background_color = (0,255,0)
-        AnchorLayout:
+
+            
+        AnchorLayout: -> # The widget aligns its children to a border (top, bottom, left, right) or center.
             anchor_y:'bottom'
-            BoxLayout:
-                Button:
+            BoxLayout: -> # It arranges children in a vertical or horizontal box.
+                Button: -> # Go to previous page
                     on_release:app.root.current = 'home'
                     background_normal:'Button-Previous-icon.png'
                     background_down:'Button-Previous-icon.png'
-                Button:
+                Button: # Go to next page
                     on_release:app.root.current = 'q2'
                     background_normal:'next-button-icon-png-32.png'
                     background_down:'next-button-icon-png-32.png'
