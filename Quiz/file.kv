@@ -1,0 +1,646 @@
+ScreenManagement:
+    HomePage:
+    Question1:
+    Question2:
+    Question3:
+    Question4:
+    Question5:
+    Question6:
+    Question7:
+    Question8:
+    Question9:
+    Question10:
+
+
+<HomePage>:
+    name:'home'
+    canvas.before:
+        Rectangle:
+            size:self.size
+            source: 'play_quiz.jpg'
+        
+    
+    Button:
+        on_release:app.root.current = 'q1'
+        size_hint:0.65,0.3
+        pos_hint: {"x":0.15,"y":0.15,}
+        background_normal:'play.png'
+        background_down:'play.png'
+                  
+<Question1>:
+    name:'q1'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'1. Кои са трите национални парка в България?'
+            font_size:self.width/6.5
+            color: 0,0,0
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            padding: [50,0]
+            margin: [20, 0]
+            
+        Button:
+            background_color: 0,255,255
+            text: 'А. Рила'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+            on_release:self.color = (0,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Пирин'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Витоша'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Централен Балкан'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'home'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q2'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question2>:
+    name:'q2'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'2. Кой е последният изригнал вулкан на българска територия?'
+            font_size:self.width/7
+            color: 0,0,0
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+
+            padding: [50,0]
+            margin: [20, 0]
+
+        Button:
+            background_color: 0,255,255
+            text: 'А. Могила Оструша'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Брезнишката котловина'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Джендем тепе'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Възвишението Кожух'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q1'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q3'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question3>:
+    name:'q3'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'3. Коя е най-дългата пещера в България?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/6
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            padding: [50,0]
+            margin: [20, 0]
+          
+        Button:
+            background_color: 0,255,255
+            text: 'А. Духлата'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Съева дупка'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Бачо Киро'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Орлова чука'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q2'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q4'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question4>:
+    name:'q4'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'4. Кое е най-старото дърво у нас?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/5
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text_size: self.width, None
+            padding: [50,0]
+            margin: [20, 0]
+ 
+        Button:
+            background_color: 0,255,255
+            text: 'А. Байкушевата мура'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Гранитският дъб'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Старият бряст'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Кръстатият дъб'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q3'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q5'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question5>:
+    name:'q5'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'5. Кое е от следните не е скален феномен?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/6.5
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text_size: self.width, None
+            padding: [50,0]
+            margin: [20, 0]
+          
+        Button:
+            background_color: 0,255,255
+            text: 'А. Ритлите'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Лъвската глава'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Скоковете при Мъглиж'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Чуклите'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q4'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q6'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question6>:
+    name:'q6'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'6. Кое от следните животни се среща в България, макар и рядко?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/7
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text_size: self.width, None
+            padding: [50,0]
+            margin: [20, 0]
+
+        Button:
+            background_color: 0,255,255
+            text: 'А. Зелена анаконда'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Бяла мечка'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Розово фламинго'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Черна пираня'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q5'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q7'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question7>:
+    name:'q7'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'7. Кое от следните езера не спада към Седемте рилски?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/6.5
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text_size: self.width, None
+            padding: [50,0]
+            margin: [20, 0]
+
+        Button:
+            background_color: 0,255,255
+            text: 'А. Близнака'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Трилистника'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Бъбрека'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Ухото'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q6'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q8'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question8>:
+    name:'q8'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'8. В кое селище е измерена най-ниската температура у нас?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/7
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text_size: self.width, None
+            padding: [50,0]
+            margin: [20, 0]
+
+        Button:
+            background_color: 0,255,255
+            text: 'А. Кнежа'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Трън'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Априлци'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Смолян'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q7'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q9'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question9>:
+    name:'q9'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'9. Кое българско селище има най-дългата плажна ивица в България?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/7.5
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text_size: self.width, None
+            padding: [50,0]
+            margin: [20, 0]
+
+        Button:
+            background_color: 0,255,255
+            text: 'А. Шабла'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Крапец'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Слънчев бряг'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Шкорпиловци'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q8'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'q10'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
+
+<Question10>:
+    name:'q10'
+    BoxLayout:
+        orientation: 'vertical'
+
+        Label:
+            text:'10. Кой от следните не е планински първенец?'
+            text_size: self.width, None
+            size_hint: 0.8, None
+            pos_hint: {"x":0.10,"y":0.10,}
+            height: self.texture_size[1]
+            font_size:self.width/6.8
+            color: 0,0,0
+            canvas.before:
+                Rectangle:
+                    pos: self.pos
+                    size: self.size
+            text_size: self.width, None
+            padding: [50,0]
+            margin: [20, 0]
+
+        Button:
+            background_color: 0,255,255
+            text: 'А. Голям Персенк'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (0,255,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Б. Гоцев връх'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'В. Вишеград'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+        Button:
+            background_color: 0,255,255
+            text: 'Г. Голяма Махиада'
+            text_size: self.width, None
+            font_size:self.width/20
+            color: (255,255,255)
+            on_release:self.background_color = (255,0,0)
+            on_release:self.color = (0,0,0)
+        AnchorLayout:
+            anchor_y:'bottom'
+            BoxLayout:
+                Button:
+                    on_release:app.root.current = 'q9'
+                    background_normal:'Button-Previous-icon.png'
+                    background_down:'Button-Previous-icon.png'
+                Button:
+                    on_release:app.root.current = 'home'
+                    background_normal:'next-button-icon-png-32.png'
+                    background_down:'next-button-icon-png-32.png'
