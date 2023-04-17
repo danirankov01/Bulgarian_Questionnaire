@@ -1,4 +1,4 @@
-ScreenManagement: -> # Make all of the pages screenable
+ScreenManagement: # Make all of the pages screenable
     HomePage:
     Question1:
     Question2:
@@ -12,7 +12,7 @@ ScreenManagement: -> # Make all of the pages screenable
     Question10:
 
 
-<HomePage>: -> # load logo
+<HomePage>: # load logo
     name:'home'
     canvas.before:
         Rectangle:
@@ -20,7 +20,7 @@ ScreenManagement: -> # Make all of the pages screenable
             source: 'play_quiz.jpg'
         
     
-    Button: -> # make sizes, load buttons - "play" and "first question page (q1)"
+    Button: # make sizes, load buttons - "play" and "first question page (q1)"
         on_release:app.root.current = 'q1'
         size_hint:0.65,0.3
         pos_hint: {"x":0.15,"y":0.15,}
@@ -31,14 +31,14 @@ ScreenManagement: -> # Make all of the pages screenable
         # From 32 line till the last one the code is exactly the same #
         # So I will explain only the first question (page) #
 
-<Question1>: - # A class rule, declared by the name of a widget class between < > and followed by :
+<Question1>: # A class rule, declared by the name of a widget class between < > and followed by :
                 # defines the appearance and behavior of any instance of that class
 
-    name:'q1' - # reference for the button
+    name:'q1'  # reference for the button
     BoxLayout:
-        orientation: 'vertical' - # positioning of the whole page #
+        orientation: 'vertical' # positioning of the whole page #
 
-        Label: -> # The Label widget is for rendering text
+        Label: # The Label widget is for rendering text
 
             text:'1. Кои са трите национални парка в България?'
             font_size:self.width/6.5 -> # Size of the question
@@ -52,7 +52,7 @@ ScreenManagement: -> # Make all of the pages screenable
 
             height: self.texture_size[1]
             canvas.before:
-                Rectangle: -> # The instruction Rectangle is automatically added to the canvas object and will be used when the window is drawn.
+                Rectangle:  # The instruction Rectangle is automatically added to the canvas object and will be used when the window is drawn.
                     pos: self.pos
                     size: self.size
 
@@ -95,7 +95,7 @@ ScreenManagement: -> # Make all of the pages screenable
             color: (255,255,255)
             on_release:self.background_color = (0,255,0)
 
-            
+
         AnchorLayout: -> # The widget aligns its children to a border (top, bottom, left, right) or center.
             anchor_y:'bottom'
             BoxLayout: -> # It arranges children in a vertical or horizontal box.
